@@ -33,6 +33,7 @@ I harnessed the power of several key tools;
 
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the data analyst job market. Here's how I approached each question;
+Property Level Analysis
 ## 1. The Top 10 most expensive properties with their name,price, bedrooms and location
 ```sql
 SELECT
@@ -71,3 +72,31 @@ WHERE
 bathrooms > 3
 order by price desc;
 ```
+
+## 4.  Which category (flats, detached, etc) has the highest average floor area?
+```sql
+SELECT
+category,
+AVG(floor_area) AS average_floor_area
+FROM
+ghana_real_estate_rentals.house_rentals
+GROUP BY
+category
+ORDER BY
+average_floor_area DESC
+LIMIT 1;
+```
+
+## 5. Show the average rental price per furnishing type (is furnished)
+```sql
+select
+is_furnished,
+round(AVG(price),2) as avg_rental_price
+FROM
+ghana_real_estate_rentals.house_rentals
+group by
+is_furnished
+order by
+avg_rental_price;
+```
+
