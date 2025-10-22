@@ -27,6 +27,6 @@ Trends and Conditions
 
 # Tools I Used
 I harnessed the power of several key tools;
-SQL
-My SQL Workbench
-GITHUB
+- SQL
+- My SQL Workbench
+- GITHUB
