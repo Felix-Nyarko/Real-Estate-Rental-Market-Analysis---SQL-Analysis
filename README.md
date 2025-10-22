@@ -19,6 +19,7 @@ Location and Region Insights
 10. Which localities in Greater Accra have average prices above the overall dataset average?
 
 Trends and Conditions
+
 11. Count how many New Vrs Used properties are in the dataset
 12. Find the average price per square meter (price/floor_area) for each region
 13. How many properties have parking space compared to those without?
