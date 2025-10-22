@@ -36,7 +36,7 @@ Each query for this project aimed at investigating specific aspects of the data 
 
 Property Level Analysis
 
-## 1. The Top 10 most expensive properties with their name,price, bedrooms and location
+### 1. The Top 10 most expensive properties with their name,price, bedrooms and location
 ```sql
 SELECT
 	name,
