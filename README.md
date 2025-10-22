@@ -200,3 +200,33 @@ group by
 order by
 	average_price_per_square_meter desc;
 ```
+## 13.  How many properties have parking space compared to those without?
+```sql
+   SELECT 
+    parking_space, 
+    COUNT(*) AS total_properties
+FROM 
+   ghana_real_estate_rentals.house_rentals
+GROUP BY 
+   parking_space;
+```
+
+## 14. Which amenities appear most frequently across listings? (requires string search/processing)
+```sql
+SELECT 
+    TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(amenities, ',', n.n), ',', -1)) AS amenity,
+    COUNT(*) AS frequency
+FROM 
+    ghana_real_estate_rentals.house_rentals
+JOIN 
+    (
+        SELECT 1 AS n UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 
+        UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10
+    ) n
+ON 
+    CHAR_LENGTH(amenities) - CHAR_LENGTH(REPLACE(amenities, ',', '')) >= n.n - 1
+GROUP BY 
+    amenity
+ORDER BY 
+    frequency DESC;
+```
