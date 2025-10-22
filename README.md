@@ -30,3 +30,7 @@ I harnessed the power of several key tools;
 - SQL
 - My SQL Workbench
 - GITHUB
+
+# The Analysis
+Each query for this project aimed at investigating specific aspects of the data analyst job market. Here's how I approached each question;
+## 1. The Top 10 most expensive properties with their name,price, bedrooms and location
