@@ -45,3 +45,29 @@ ghana_real_estate_rentals.house_rentals
 order by price desc
 LIMIT 10;
 ```
+
+## 2. The Average Rental Price Per Bedroom count
+```sql
+select
+round(AVG(price),2) as avg_rental_price,
+bedrooms
+FROM
+ghana_real_estate_rentals.house_rentals
+group by bedrooms
+order by bedrooms;
+```
+
+## 3. Retrieve the properties with more than 3 bathrooms and sort them by price (descending)
+```sql
+SELECT
+name,
+bedrooms,
+location,
+price,
+bathrooms
+FROM
+ghana_real_estate_rentals.house_rentals
+WHERE
+bathrooms > 3
+order by price desc;
+```
