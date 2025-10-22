@@ -129,3 +129,74 @@ order by
 average_rental_price desc
 LIMIT 5;
 ```
+
+## 8. How many properties are available in each region?
+```sql
+select 
+region,
+count(*) as total_properties
+from
+ghana_real_estate_rentals.house_rentals
+group by
+region
+order by
+total_properties desc;
+```
+
+## 9. Find the most expensive property in Greater Accra
+```sql
+SELECT 
+    name, 
+    price, 
+    location
+FROM 
+    ghana_real_estate_rentals.house_rentals
+WHERE 
+    region = 'Greater Accra'
+ORDER BY 
+    price DESC
+LIMIT 1;
+```
+
+## 10. Which localities in Greater Accra have average prices above the overall dataset average?
+```sql
+SELECT 
+    locality,
+    AVG(price) AS average_price
+FROM 
+   ghana_real_estate_rentals.house_rentals
+WHERE 
+    region = 'Greater Accra'
+GROUP BY 
+    locality
+HAVING 
+    AVG(price) > (SELECT AVG(price) FROM ghana_real_estate_rentals.house_rentals)
+ORDER BY 
+    average_price DESC;
+```
+
+TRENDS AND CONDITIONS
+
+## 11. Count how category are in the dataset
+```sql
+SELECT 
+    category,
+    count(*) AS total_properties
+FROM 
+   ghana_real_estate_rentals.house_rentals
+GROUP BY 
+    category;
+```
+
+## 12. Find the average price per square meter (price/floor_area) for each region
+```sql
+SELECT
+	region,
+ round(AVG(price/floor_area), 2) as average_price_per_square_meter
+FROM
+	ghana_real_estate_rentals.house_rentals
+group by
+	region
+order by
+	average_price_per_square_meter desc;
+```
