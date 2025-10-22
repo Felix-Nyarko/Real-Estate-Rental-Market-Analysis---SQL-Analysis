@@ -34,3 +34,14 @@ I harnessed the power of several key tools;
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the data analyst job market. Here's how I approached each question;
 ## 1. The Top 10 most expensive properties with their name,price, bedrooms and location
+```sql
+SELECT
+	name,
+	price,
+	bedrooms,
+	location
+FROM
+ghana_real_estate_rentals.house_rentals
+order by price desc
+LIMIT 10;
+```
