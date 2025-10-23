@@ -135,14 +135,14 @@ order by
 This SQL query calculates the average rental price for each region, allowing for a comparison of housing costs across different geographical areas. It helps uncover regional rental trends and highlights areas with higher or lower average property prices, supporting market analysis and investment decisions.
 ```sql
 SELECT
-region,
-round(avg(price),2) as average_rental
+	region,
+	round(avg(price),2) as average_rental
 FROM 
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 group by
-region
+	region
 order by
-average_rental desc;
+	average_rental desc;
 ```
 | Region   | Average Rental | 
 |----------|----------|
@@ -161,14 +161,14 @@ average_rental desc;
 This SQL query identifies the top five localities with the highest average rental prices. It highlights premium neighborhoods and helps analyze location-based pricing trendS.
 ```sql
 SELECT
-locality,
-avg(price) as average_rental_price
+	locality,
+	avg(price) as average_rental_price
 FROM
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 group by
-locality
+	locality
 order by
-average_rental_price desc
+	average_rental_price desc
 LIMIT 5;
 ```
 
@@ -176,14 +176,14 @@ LIMIT 5;
 This SQL query counts the total number of properties available in each region. It helps visualize the distribution of property listings across different areas, offering insights into market supply and potential investment hotspots.
 ```sql
 select 
-region,
-count(*) as total_properties
+	region,
+	count(*) as total_properties
 from
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 group by
-region
+	region
 order by
-total_properties desc;
+	total_properties desc;
 ```
 | Region   | Total Properties | 
 |----------|----------|
