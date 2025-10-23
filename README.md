@@ -173,6 +173,7 @@ LIMIT 1;
 ```
 
 ## 10. Which localities in Greater Accra have average prices above the overall dataset average?
+This SQL query identifies localities within Greater Accra whose average rental prices exceed the overall dataset average. It provides a focused view of premium neighborhoods in the region.
 ```sql
 SELECT 
     locality,
@@ -191,7 +192,8 @@ ORDER BY
 
 TRENDS AND CONDITIONS
 
-## 11. Count how category are in the dataset
+## 11. Count how many under each category are in the dataset
+This SQL query counts the total number of properties under each category (e.g., flats, detached houses, semi-detached, etc.). It provides an overview of the property type distribution within the dataset, offering insights into which housing categories dominate the market.
 ```sql
 SELECT 
     category,
@@ -201,8 +203,10 @@ FROM
 GROUP BY 
     category;
 ```
+*INSERT A TABLE*
 
 ## 12. Find the average price per square meter (price/floor_area) for each region
+This SQL query calculates the average rental price per square meter for each region by dividing the property price by its floor area.
 ```sql
 SELECT
 	region,
@@ -215,6 +219,7 @@ order by
 	average_price_per_square_meter desc;
 ```
 ## 13.  How many properties have parking space compared to those without?
+This SQL query counts how many properties offer parking space compared to those that do not. It helps assess the availability of a key amenity across listings, offering insights into how common parking facilities are within the housing market and how they might influence property value or demand.
 ```sql
    SELECT 
     parking_space, 
@@ -224,6 +229,7 @@ FROM
 GROUP BY 
    parking_space;
 ```
+*INSERT A TABLE*
 
 ## 14. Which amenities appear most frequently across listings? (requires string search/processing)
 ```sql
