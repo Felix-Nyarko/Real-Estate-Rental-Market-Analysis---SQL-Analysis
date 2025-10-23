@@ -114,7 +114,7 @@ is_furnished
 order by
 avg_rental_price;
 ```
-| Category (Furnish)   | Average Rentak Price | 
+| Category (Furnish)   | Average Rental Price | 
 |----------|----------|
 | Unfurnished     | 5672.26  | 
 | Semi-Furnished    | 7403.58   | 
@@ -173,15 +173,16 @@ region
 order by
 total_properties desc;
 ```
-| Region   | Average Rental | 
+| Region   | Total Properties | 
 |----------|----------|
-| Greater Accra     | 8209.24  | 
-| Ashanti    | 3660.17   | 
-| Western Region    | 3513.64   | 
-| Northern Region    | 2242.75   |
-| Eastern Region    | 1750.00   |
-| Central Region    | 1181.18   |
-| Brong Ahafo    | 1175.00   |
+| Greater Accra     | 4219  | 
+| Ashanti    | 185   | 
+| Central Region     | 85   | 
+| Northern Region    | 57   |
+| Eastern Region    | 14   |
+| Western Region    | 11   |
+| Brong Ahafo    | 4   |
+
 ## 9. Find the most expensive property in Greater Accra
 This SQL query identifies the highest-priced property listed in the Greater Accra region. It filters the dataset by region, sorts properties by price in descending order, and retrieves the top record. The goal is to highlight premium real estate listings and understand pricing dynamics within one of Ghana’s most active property markets.
 ```sql
@@ -229,7 +230,14 @@ FROM
 GROUP BY 
     category;
 ```
-*INSERT A TABLE*
+| Category   | Total Properties | 
+|----------|----------|
+| Flats     | 2987  | 
+| Detached    | 1236   | 
+| Townhouse    | 92   | 
+| Duplex    | 183   |
+| Mansion    | 30   |
+| Semi-Detached    | 47   |
 
 ## 12. Find the average price per square meter (price/floor_area) for each region
 This SQL query calculates the average rental price per square meter for each region by dividing the property price by its floor area.
@@ -255,7 +263,11 @@ FROM
 GROUP BY 
    parking_space;
 ```
-*INSERT A TABLE*
+| Parking Space   | Total Properties | 
+|----------|----------|
+| False     | 4573  | 
+| True    | 2   | 
+
 
 ## 14. Which amenities appear most frequently across listings? (requires string search/processing)
 This SQL query analyzes the amenities column to identify which features (such as parking, gym, pool, or security) appear most frequently across all property listings.
