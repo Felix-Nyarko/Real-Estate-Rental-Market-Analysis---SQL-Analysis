@@ -79,6 +79,7 @@ order by price desc;
 ```
 
 ## 4.  Which category (flats, detached, etc) has the highest average floor area?
+This SQL query analyzes property categories (such as flats, detached houses, and semi-detached units) to determine which type offers the largest average floor area. It helps identify which property types provide the most spacious thereby comparing value by size.
 ```sql
 SELECT
 category,
@@ -91,6 +92,7 @@ ORDER BY
 average_floor_area DESC
 LIMIT 1;
 ```
+*INSERT A TABLE*
 
 ## 5. Show the average rental price per furnishing type (is furnished)
 ```sql
