@@ -307,3 +307,16 @@ GROUP BY
 ORDER BY 
     frequency DESC;
 ```
+
+# What I learned
+1. **Practical SQL Application in Real Estate**
+   This project deepened my understanding of how SQL can be used to explore and analyze real-world property data — from calculating averages and identifying trends to filtering high-value listings and comparing regional performance.
+
+2. **Data-Driven Market Understanding**
+   Through querying and aggregating key metrics like rental yields, price per square meter, and category distribution, I learned to interpret data in ways that support better real estate decisions and investment strategies.
+
+3. **Enhanced Data Interpretation for Market Insights**
+   I developed the ability to analyze unstructured data — such as amenities and property features — to uncover patterns that reflect tenant preferences and market trends. This skill strengthens my capacity as a real estate executive to make data-informed choices in marketing, pricing, and property positioning.
+
+
+# Conclusion
