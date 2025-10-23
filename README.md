@@ -3,14 +3,14 @@ A data analytics project using SQL to explore and analyze a house rentals datase
 # Introduction
 # Background
 ## The questions I wanted to answer through my SQL queries were;
-Property Level Analysis
+# Property Level Analysis
 1. List the Top 10 most expensive properties with their name,price, bedrooms and location
 2. Find the average rental price per bedroom count
 3. Retrieve the properties with more than 3 bathrooms and sort them by price (descending)
 4. Which category (flats, detached, etc) has the highest average floor area?
 5. Show the average rental price per furnishing type (is furnished)
 
-Location and Region Insights
+# Location and Region Insights
 
 6. Find te average rent by region
 7. Get the top 5 localities with the highest average rental prices
@@ -18,7 +18,7 @@ Location and Region Insights
 9. Find the most expensive property in Greater Accra
 10. Which localities in Greater Accra have average prices above the overall dataset average?
 
-Trends and Conditions
+# Trends and Conditions
 
 11. Count how many New Vrs Used properties are in the dataset
 12. Find the average price per square meter (price/floor_area) for each region
@@ -34,7 +34,7 @@ I harnessed the power of several key tools;
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the data analyst job market. Here's how I approached each question;
 
-Property Level Analysis
+### Property Level Analysis
 
 ### 1. The Top 10 most expensive properties with their name,price, bedrooms and location
 This SQL query retrieves the top 10 most expensive properties from the dataset, displaying each property's name, price, number of bedrooms, and location. It helps identify high-value listings and gives insights into luxury housing trends within the market.
@@ -45,8 +45,9 @@ SELECT
 	bedrooms,
 	location
 FROM
-ghana_real_estate_rentals.house_rentals
-order by price desc
+	ghana_real_estate_rentals.house_rentals
+order by
+	price desc
 LIMIT 10;
 ```
 
@@ -54,42 +55,45 @@ LIMIT 10;
 This SQL query calculates the average rental price for each bedroom count across all properties. It helps reveal how rental prices scale with the number of bedrooms.
 ```sql
 select
-round(AVG(price),2) as avg_rental_price,
-bedrooms
+	round(AVG(price),2) as avg_rental_price,
+	bedrooms
 FROM
-ghana_real_estate_rentals.house_rentals
-group by bedrooms
-order by bedrooms;
+	ghana_real_estate_rentals.house_rentals
+group by
+	bedrooms
+order by
+	bedrooms;
 ```
 
 ## 3. Retrieve the properties with more than 3 bathrooms and sort them by price (descending)
 This SQL query retrieves all properties that have more than three bathrooms and orders them by price in descending order. It provides insight where larger and more premium properties often feature multiple bathrooms and command higher rental or sale prices.
 ```sql
 SELECT
-name,
-bedrooms,
-location,
-price,
-bathrooms
+	name,
+	bedrooms,
+	location,
+	price,
+	bathrooms
 FROM
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 WHERE
-bathrooms > 3
-order by price desc;
+	bathrooms > 3
+order by
+	price desc;
 ```
 
 ## 4.  Which category (flats, detached, etc) has the highest average floor area?
 This SQL query analyzes property categories (such as flats, detached houses, and semi-detached units) to determine which type offers the largest average floor area. It helps identify which property types provide the most spacious thereby comparing value by size.
 ```sql
 SELECT
-category,
-AVG(floor_area) AS average_floor_area
+	category,
+	AVG(floor_area) AS average_floor_area
 FROM
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 GROUP BY
-category
+	category
 ORDER BY
-average_floor_area DESC
+	average_floor_area DESC
 LIMIT 1;
 ```
 | Category   | Average Floor Area | 
@@ -101,24 +105,28 @@ LIMIT 1;
 | Detached    | 511.45   |
 | Semi-Detached    | 384.91   |
 
+*Table showing the various category of property types and the average floor area*
+
 ## 5. Show the average rental price per furnishing type (is furnished)
 This SQL query calculates the average rental price based on furnishing status (furnished, semi-furnished, or unfurnished). It provides insight into how interior setup and comfort level influence rental pricing, helping both property owners and tenants understand the value of furnished options in the market.
 ```sql
 select
-is_furnished,
-round(AVG(price),2) as avg_rental_price
+	is_furnished,
+	round(AVG(price),2) as avg_rental_price
 FROM
-ghana_real_estate_rentals.house_rentals
+	ghana_real_estate_rentals.house_rentals
 group by
-is_furnished
+	is_furnished
 order by
-avg_rental_price;
+	avg_rental_price;
 ```
 | Category (Furnish)   | Average Rental Price | 
 |----------|----------|
 | Unfurnished     | 5672.26  | 
 | Semi-Furnished    | 7403.58   | 
 | Furnished    | 18534.17   | 
+
+*Table showing the various category of property states and their average rental price*
 
 Location and Region Insights
 
