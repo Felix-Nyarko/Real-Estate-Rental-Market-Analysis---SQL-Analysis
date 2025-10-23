@@ -128,6 +128,7 @@ order by
 
 *Table showing the various category of property states and their average rental price*
 
+
 ### Location and Region Insights
 
 ## 6. Find the average rent by region
@@ -152,6 +153,9 @@ average_rental desc;
 | Eastern Region    | 1750.00   |
 | Central Region    | 1181.18   |
 | Brong Ahafo    | 1175.00   |
+
+*Table showing the various regions and their average rental price*
+
 
 ## 7. Get the top 5 localities with the highest average rental prices
 This SQL query identifies the top five localities with the highest average rental prices. It highlights premium neighborhoods and helps analyze location-based pricing trendS.
@@ -191,6 +195,8 @@ total_properties desc;
 | Western Region    | 11   |
 | Brong Ahafo    | 4   |
 
+*Table showing the various regions and their total properties*
+
 ## 9. Find the most expensive property in Greater Accra
 This SQL query identifies the highest-priced property listed in the Greater Accra region. It filters the dataset by region, sorts properties by price in descending order, and retrieves the top record. The goal is to highlight premium real estate listings and understand pricing dynamics within one of Ghana’s most active property markets.
 ```sql
@@ -225,6 +231,7 @@ ORDER BY
     average_price DESC;
 ```
 
+
 ### TRENDS AND CONDITIONS
 
 ## 11. Count how many under each category are in the dataset
@@ -246,6 +253,8 @@ GROUP BY
 | Duplex    | 183   |
 | Mansion    | 30   |
 | Semi-Detached    | 47   |
+
+*Table showing the various housing categories and their total prices*
 
 ## 12. Find the average price per square meter (price/floor_area) for each region
 This SQL query calculates the average rental price per square meter for each region by dividing the property price by its floor area.
@@ -276,6 +285,7 @@ GROUP BY
 | False     | 4573  | 
 | True    | 2   | 
 
+*Table showing various properties and their parking spaces*
 
 ## 14. Which amenities appear most frequently across listings? (requires string search/processing)
 This SQL query analyzes the amenities column to identify which features (such as parking, gym, pool, or security) appear most frequently across all property listings.
