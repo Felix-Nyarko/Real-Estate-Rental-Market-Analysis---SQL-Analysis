@@ -37,6 +37,7 @@ Each query for this project aimed at investigating specific aspects of the data 
 Property Level Analysis
 
 ### 1. The Top 10 most expensive properties with their name,price, bedrooms and location
+This SQL query retrieves the top 10 most expensive properties from the dataset, displaying each property's name, price, number of bedrooms, and location. It helps identify high-value listings and gives insights into luxury housing trends within the market.
 ```sql
 SELECT
 	name,
@@ -50,6 +51,7 @@ LIMIT 10;
 ```
 
 ## 2. The Average Rental Price Per Bedroom count
+This SQL query calculates the average rental price for each bedroom count across all properties. It helps reveal how rental prices scale with the number of bedrooms.
 ```sql
 select
 round(AVG(price),2) as avg_rental_price,
@@ -61,6 +63,7 @@ order by bedrooms;
 ```
 
 ## 3. Retrieve the properties with more than 3 bathrooms and sort them by price (descending)
+This SQL query retrieves all properties that have more than three bathrooms and orders them by price in descending order. It provides insight where larger and more premium properties often feature multiple bathrooms and command higher rental or sale prices.
 ```sql
 SELECT
 name,
@@ -144,6 +147,7 @@ total_properties desc;
 ```
 
 ## 9. Find the most expensive property in Greater Accra
+This SQL query identifies the highest-priced property listed in the Greater Accra region. It filters the dataset by region, sorts properties by price in descending order, and retrieves the top record. The goal is to highlight premium real estate listings and understand pricing dynamics within one of Ghana’s most active property markets.
 ```sql
 SELECT 
     name, 
