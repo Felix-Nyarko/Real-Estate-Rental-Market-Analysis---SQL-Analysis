@@ -92,7 +92,14 @@ ORDER BY
 average_floor_area DESC
 LIMIT 1;
 ```
-*INSERT A TABLE*
+| Category   | Average Floor Area | 
+|----------|----------|
+| Mansion     | 885.6  | 
+| Duplex    | 628.68   | 
+| Flats    | 579.71   | 
+| Townhouse    | 537.08   |
+| Detached    | 511.45   |
+| Semi-Detached    | 384.91   |
 
 ## 5. Show the average rental price per furnishing type (is furnished)
 This SQL query calculates the average rental price based on furnishing status (furnished, semi-furnished, or unfurnished). It provides insight into how interior setup and comfort level influence rental pricing, helping both property owners and tenants understand the value of furnished options in the market.
@@ -107,7 +114,11 @@ is_furnished
 order by
 avg_rental_price;
 ```
-*INSERT A TABLE*
+| Category (Furnish   | Average Rentak Price | 
+|----------|----------|
+| Unfurnished     | 5672.26  | 
+| Semi-Furnished    | 7403.58   | 
+| Furnished    | 18534.17   | 
 
 Location and Region Insights
 
@@ -124,7 +135,14 @@ region
 order by
 average_rental desc;
 ```
-*INSERT A TABLE*
+| Category   | Average Floor Area | 
+|----------|----------|
+| Mansion     | 885.6  | 
+| Duplex    | 628.68   | 
+| Flats    | 579.71   | 
+| Townhouse    | 537.08   |
+| Detached    | 511.45   |
+| Semi-Detached    | 384.91   |
 
 ## 7. Get the top 5 localities with the highest average rental prices
 This SQL query identifies the top five localities with the highest average rental prices. It highlights premium neighborhoods and helps analyze location-based pricing trendS.
