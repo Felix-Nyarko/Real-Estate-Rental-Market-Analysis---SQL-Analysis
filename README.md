@@ -232,6 +232,7 @@ GROUP BY
 *INSERT A TABLE*
 
 ## 14. Which amenities appear most frequently across listings? (requires string search/processing)
+This SQL query analyzes the amenities column to identify which features (such as parking, gym, pool, or security) appear most frequently across all property listings.
 ```sql
 SELECT 
     TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(amenities, ',', n.n), ',', -1)) AS amenity,
