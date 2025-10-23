@@ -128,7 +128,7 @@ order by
 
 *Table showing the various category of property states and their average rental price*
 
-Location and Region Insights
+### Location and Region Insights
 
 ## 6. Find the average rent by region
 This SQL query calculates the average rental price for each region, allowing for a comparison of housing costs across different geographical areas. It helps uncover regional rental trends and highlights areas with higher or lower average property prices, supporting market analysis and investment decisions.
@@ -225,7 +225,7 @@ ORDER BY
     average_price DESC;
 ```
 
-TRENDS AND CONDITIONS
+### TRENDS AND CONDITIONS
 
 ## 11. Count how many under each category are in the dataset
 This SQL query counts the total number of properties under each category (e.g., flats, detached houses, semi-detached, etc.). It provides an overview of the property type distribution within the dataset, offering insights into which housing categories dominate the market.
