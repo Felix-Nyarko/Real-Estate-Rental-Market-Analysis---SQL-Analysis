@@ -114,7 +114,7 @@ is_furnished
 order by
 avg_rental_price;
 ```
-| Category (Furnish   | Average Rentak Price | 
+| Category (Furnish)   | Average Rentak Price | 
 |----------|----------|
 | Unfurnished     | 5672.26  | 
 | Semi-Furnished    | 7403.58   | 
@@ -135,14 +135,15 @@ region
 order by
 average_rental desc;
 ```
-| Category   | Average Floor Area | 
+| Region   | Average Rental | 
 |----------|----------|
-| Mansion     | 885.6  | 
-| Duplex    | 628.68   | 
-| Flats    | 579.71   | 
-| Townhouse    | 537.08   |
-| Detached    | 511.45   |
-| Semi-Detached    | 384.91   |
+| Greater Accra     | 8209.24  | 
+| Ashanti    | 3660.17   | 
+| Western Region    | 3513.64   | 
+| Northern Region    | 2242.75   |
+| Eastern Region    | 1750.00   |
+| Central Region    | 1181.18   |
+| Brong Ahafo    | 1175.00   |
 
 ## 7. Get the top 5 localities with the highest average rental prices
 This SQL query identifies the top five localities with the highest average rental prices. It highlights premium neighborhoods and helps analyze location-based pricing trendS.
@@ -172,8 +173,15 @@ region
 order by
 total_properties desc;
 ```
-*INSERT A TABLE*
-
+| Region   | Average Rental | 
+|----------|----------|
+| Greater Accra     | 8209.24  | 
+| Ashanti    | 3660.17   | 
+| Western Region    | 3513.64   | 
+| Northern Region    | 2242.75   |
+| Eastern Region    | 1750.00   |
+| Central Region    | 1181.18   |
+| Brong Ahafo    | 1175.00   |
 ## 9. Find the most expensive property in Greater Accra
 This SQL query identifies the highest-priced property listed in the Greater Accra region. It filters the dataset by region, sorts properties by price in descending order, and retrieves the top record. The goal is to highlight premium real estate listings and understand pricing dynamics within one of Ghana’s most active property markets.
 ```sql
