@@ -1,7 +1,12 @@
-# Real-Estate-Rental-Market-Analysis---SQL-Analysis
-A data analytics project using SQL to explore and analyze a house rentals dataset. The project focuses on querying property data to uncover insights such as rental price trends, regional comparisons, property conditions, and amenities distribution
 # Introduction
+This project explores a real estate rentals dataset using SQL to uncover insights into property prices, regional trends, and market dynamics. By performing structured queries, I analyzed factors such as average rent by region, rental price trends, regional comparisons, property type distribution, pricing per square meter, and amenity frequency and distribution. 
+
+The goal of this project is to demonstrate how SQL can be used to transform raw housing data into meaningful insights that support data-driven decision-making in the real estate industry. As a real estate executive with a growing focus on data analytics, this analysis bridges my domain expertise with technical skills in data exploration and reporting.
+
 # Background
+The real estate industry generates vast amounts of data — from property listings and rental prices to amenities and regional characteristics. However, without proper analysis, these data points remain underutilized.
+This project was developed to bridge that gap by applying **SQL-based data analytics** to a housing rentals dataset. The goal was to extract meaningful insights about property distribution, pricing behavior, and market trends. As a **real estate executive** transitioning into data analytics, this project reflects my interest in leveraging data to make smarter decisions in property marketing, pricing, and investment strategy.
+
 ## The questions I wanted to answer through my SQL queries were;
 # Property Level Analysis
 1. List the Top 10 most expensive properties with their name,price, bedrooms and location
@@ -320,3 +325,4 @@ ORDER BY
 
 
 # Conclusion
+This SQL real estate analysis project provided valuable hands-on experience in using data to uncover actionable market insights. Through structured queries and data exploration, I analyzed pricing patterns, regional trends, property categories, and amenity distributions to better understand the dynamics of the housing market. The project strengthened my analytical thinking and technical SQL skills while deepening my understanding of how data shapes strategic decisions in real estate. As a real estate executive with a growing focus on data analytics, this exercise reinforced the importance of leveraging data to drive smarter marketing, pricing, and investment outcomes.
